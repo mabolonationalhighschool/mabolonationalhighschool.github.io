@@ -33,3 +33,20 @@ img {
     display: block;
     margin: 30px auto 10px;
 }
+/* Navigation Bar */
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav a {
+    color: #8b0000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
