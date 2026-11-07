@@ -737,3 +737,218 @@ footer p {
     }
 
 }
+/* =========================================
+   SCHOOL PROFILE
+   ========================================= */
+
+.school-profile-section {
+    scroll-margin-top: 20px;
+}
+
+.section-intro {
+    max-width: 800px;
+    margin: 0 auto 35px;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.profile-card {
+    padding: 30px;
+    background: #f5f7fa;
+    border-radius: 8px;
+    border-top: 4px solid var(--royal-blue);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.profile-card h3 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: var(--dark-brown);
+    font-size: 20px;
+}
+
+.profile-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 14px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.profile-row:last-child {
+    border-bottom: none;
+}
+
+.profile-row strong {
+    color: var(--dark-brown);
+}
+
+.profile-row span {
+    color: #555;
+    text-align: right;
+}
+
+.profile-location {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.location-icon {
+    font-size: 30px;
+}
+
+.profile-location strong {
+    color: var(--dark-brown);
+}
+
+.profile-location p {
+    margin-top: 8px;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   DOWNLOADS
+   ========================================= */
+
+.download-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1050px;
+    margin: 35px auto 0;
+}
+
+.download-card {
+    padding: 30px 20px;
+    background: #f5f7fa;
+    border-top: 4px solid var(--royal-blue);
+    border-radius: 7px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.download-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.download-card h3 {
+    color: var(--dark-brown);
+    margin: 10px 0;
+}
+
+.download-card p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+    min-height: 65px;
+}
+
+.download-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background-color: var(--royal-blue);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.download-card a:hover {
+    background-color: var(--choco-brown);
+}
+
+
+/* =========================================
+   VISIT / CONTACT
+   ========================================= */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1050px;
+    margin: 35px auto 0;
+}
+
+.contact-card {
+    padding: 30px 20px;
+    background: #f5f7fa;
+    border-top: 4px solid var(--royal-blue);
+    border-radius: 7px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.contact-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.contact-card h3 {
+    color: var(--dark-brown);
+    margin: 10px 0;
+}
+
+.contact-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.contact-card a {
+    color: var(--royal-blue);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-card a:hover {
+    color: var(--choco-brown);
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   MOBILE - PROFILE, DOWNLOADS & CONTACT
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-card {
+        padding: 25px 20px;
+    }
+
+    .profile-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .profile-row span {
+        text-align: left;
+    }
+
+    .download-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
