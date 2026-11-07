@@ -52,11 +52,13 @@ nav a:hover {
 }
 /* HERO SECTION */
 
+/* HERO SECTION */
+
 .hero {
     max-width: 1200px;
     margin: 40px auto;
-    padding: 80px 40px;
-    background: #8b0000;
+    padding: 70px 40px;
+    background: linear-gradient(135deg, #5a321f, #244a8a);
     border-radius: 12px;
     text-align: center;
     color: white;
@@ -64,7 +66,8 @@ nav a:hover {
 
 .hero-content h1 {
     font-size: 48px;
-    margin-bottom: 20px;
+    margin: 0 0 20px;
+    color: white;
 }
 
 .hero-content p {
@@ -72,6 +75,7 @@ nav a:hover {
     max-width: 800px;
     margin: 0 auto 30px;
     line-height: 1.6;
+    color: white;
 }
 
 .hero-buttons {
@@ -85,12 +89,12 @@ nav a:hover {
     display: inline-block;
     padding: 12px 22px;
     background: white;
-    color: #8b0000;
+    color: #5a321f;
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
 }
 
 .hero-buttons a:hover {
-    background: #f0f0f0;
+    background: #e8edf5;
 }
