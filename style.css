@@ -1,1529 +1,778 @@
 /* =========================================
-   MABOLO NATIONAL HIGH SCHOOL
-   MAIN WEBSITE STYLES
-   ========================================= */
-
-
-/* =========================================
-   SCHOOL COLORS
-   ========================================= */
-
-:root {
-
-    --choco-brown: #633a28;
-    --royal-blue: #304f8c;
-    --dark-brown: #4f2d1f;
-
-    --light-background: #f4f6f9;
-
-    --white: #ffffff;
-
-    --text-color: #444444;
-
-    --border-color: #dddddd;
-
-    --light-card: #f5f7fa;
-
-}
-
-
-
-/* =========================================
-   BASIC PAGE SETTINGS
-   ========================================= */
+   GENERAL
+========================================= */
 
 * {
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
 
-
 body {
-
     margin: 0;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    background-color:
-        var(--light-background);
-
-    color:
-        var(--text-color);
-
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f9;
+    color: #222;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input {
+    font-family: inherit;
+}
 
 
 /* =========================================
    HEADER
-   ========================================= */
+========================================= */
 
 .site-header {
-
-    background-color:
-        var(--white);
-
-    border-bottom:
-        1px solid #dddddd;
-
+    background: #ffffff;
+    border-top: 3px solid #333;
+    border-bottom: 1px solid #d8d8d8;
 }
-
 
 .header-inner {
-
-    max-width:
-        1200px;
-
-    margin:
-        0 auto;
-
-    padding:
-        12px 25px;
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    gap:
-        14px;
-
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px 0;
 }
 
 
+/* SCHOOL BRAND */
 
-/* =========================================
-   SCHOOL LOGO
-   ========================================= */
+.school-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 
 .school-logo {
-
-    width:
-        65px;
-
-    height:
-        65px;
-
-    object-fit:
-        contain;
-
-    flex-shrink:
-        0;
-
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
 }
 
+.school-name h1 {
+    margin: 0;
+    font-size: 22px;
+    color: #222;
+}
+
+.school-name span {
+    display: block;
+    margin-top: 2px;
+    font-size: 10px;
+    color: #555;
+}
 
 
 /* =========================================
-   SCHOOL NAME
-   ========================================= */
-
-.school-title {
-
-    text-align:
-        left;
-
-}
-
-
-.school-title h1 {
-
-    margin:
-        0 0 3px;
-
-    font-size:
-        22px;
-
-    color:
-        #222222;
-
-}
-
-
-.school-title p {
-
-    margin:
-        0;
-
-    font-size:
-        11px;
-
-    color:
-        #555555;
-
-}
-
-
-
-/* =========================================
-   MAIN NAVIGATION
-   ========================================= */
+   NAVIGATION
+========================================= */
 
 .main-nav {
-
-    max-width:
-        1200px;
-
-    margin:
-        0 auto;
-
-    padding:
-        0 25px;
-
-    min-height:
-        43px;
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    gap:
-        4px;
-
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 8px;
+    min-height: 38px;
 }
-
 
 .main-nav > a,
-.dropbtn {
-
-    display:
-        block;
-
-    padding:
-        12px 13px;
-
-    color:
-        var(--dark-brown);
-
-    text-decoration:
-        none;
-
-    font-weight:
-        bold;
-
-    font-size:
-        13px;
-
-    white-space:
-        nowrap;
-
-    transition:
-        0.2s ease;
-
+.nav-dropbtn {
+    padding: 10px 12px;
+    border: none;
+    background: transparent;
+    color: #222;
+    font-size: 12px;
+    cursor: pointer;
+    white-space: nowrap;
 }
-
 
 .main-nav > a:hover,
-.dropbtn:hover {
-
-    color:
-        var(--royal-blue);
-
+.nav-dropbtn:hover {
+    color: #8b3f25;
 }
-
 
 
 /* =========================================
    DROPDOWN
-   ========================================= */
+========================================= */
 
-.dropdown {
+.nav-dropdown {
+    position: relative;
+}
 
-    position:
-        relative;
-
+.nav-dropbtn span {
+    font-size: 9px;
+    margin-left: 3px;
 }
 
 
-.dropbtn span {
+/* FIRST LEVEL */
 
-    font-size:
-        10px;
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
 
-    margin-left:
-        3px;
+    min-width: 190px;
 
+    background: #ffffff;
+
+    border: 1px solid #ddd;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+    display: none;
+
+    z-index: 1000;
 }
 
+
+.nav-dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+
+.dropdown-menu > a,
+.submenu-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 12px;
+
+    font-size: 11px;
+
+    color: #333;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.dropdown-menu > a:hover,
+.submenu-title:hover {
+    background: #f3f5f8;
+    color: #8b3f25;
+}
 
 
 /* =========================================
-   MAIN DROPDOWN MENU
-   ========================================= */
+   STUDENT ORGANIZATIONS SUBMENU
+========================================= */
 
-.dropdown-content {
-
-    display:
-        none;
-
-    position:
-        absolute;
-
-    top:
-        100%;
-
-    left:
-        0;
-
-    min-width:
-        210px;
-
-    background-color:
-        var(--white);
-
-    border:
-        1px solid #dddddd;
-
-    border-radius:
-        3px;
-
-    box-shadow:
-        0 5px 15px rgba(0, 0, 0, 0.15);
-
-    z-index:
-        1000;
-
-    text-align:
-        left;
-
-    overflow:
-        visible;
-
+.submenu {
+    position: relative;
 }
 
 
-.dropdown-content > a,
-.nested-dropbtn {
+.submenu-menu {
+    position: absolute;
 
-    display:
-        flex;
+    top: 0;
+    left: 100%;
 
-    align-items:
-        center;
+    min-width: 170px;
 
-    justify-content:
-        space-between;
+    background: #ffffff;
 
-    width:
-        100%;
+    border: 1px solid #ddd;
 
-    padding:
-        10px 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 
-    color:
-        #333333;
+    display: none;
 
-    text-decoration:
-        none;
-
-    font-size:
-        12px;
-
-    font-weight:
-        normal;
-
-    background-color:
-        var(--white);
-
-    border-bottom:
-        1px solid #eeeeee;
-
+    z-index: 1001;
 }
 
 
-.dropdown-content > a:last-child {
-
-    border-bottom:
-        none;
-
+.submenu:hover > .submenu-menu {
+    display: block;
 }
 
 
-.dropdown-content > a:hover,
-.nested-dropbtn:hover {
+.submenu-menu a {
+    display: block;
 
-    background-color:
-        #f1f3f7;
+    padding: 10px 12px;
 
-    color:
-        var(--royal-blue);
+    font-size: 11px;
 
+    color: #333;
+
+    border-bottom: 1px solid #eeeeee;
 }
 
+
+.submenu-menu a:hover {
+    background: #f3f5f8;
+    color: #8b3f25;
+}
 
 
 /* =========================================
-   SHOW MAIN DROPDOWN
-   ========================================= */
+   NAVIGATION SEARCH
+========================================= */
 
-.dropdown:hover > .dropdown-content {
+.nav-search {
+    margin-left: auto;
 
-    display:
-        block;
+    display: flex;
+    align-items: center;
 
+    height: 28px;
 }
 
+.nav-search input {
+    width: 120px;
+    height: 28px;
+
+    border: 1px solid #ccc;
+    border-right: none;
+
+    border-radius: 3px 0 0 3px;
+
+    padding: 0 8px;
+
+    font-size: 11px;
+
+    outline: none;
+}
+
+.nav-search input:focus {
+    border-color: #31558f;
+}
+
+
+.nav-search button {
+    height: 28px;
+    width: 34px;
+
+    border: none;
+
+    background: #31558f;
+    color: #ffffff;
+
+    border-radius: 0 3px 3px 0;
+
+    cursor: pointer;
+
+    font-size: 12px;
+}
+
+.nav-search button:hover {
+    background: #264574;
+}
 
 
 /* =========================================
-   NESTED DROPDOWN
-   STUDENT ORGANIZATIONS
-   ========================================= */
+   MAIN CONTENT
+========================================= */
 
-.nested-dropdown {
-
-    position:
-        relative;
-
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 0 30px;
 }
-
-
-.nested-dropbtn {
-
-    cursor:
-        pointer;
-
-}
-
-
-.nested-dropbtn span {
-
-    font-size:
-        16px;
-
-    line-height:
-        1;
-
-}
-
 
 
 /* =========================================
-   SECOND-LEVEL DROPDOWN
-   ========================================= */
+   IMAGE SLIDER
+========================================= */
 
-.nested-dropdown-content {
+.hero-slider {
+    position: relative;
 
-    display:
-        none;
+    width: 100%;
 
-    position:
-        absolute;
+    height: 390px;
 
-    top:
-        -1px;
+    overflow: hidden;
 
-    left:
-        100%;
+    background: #ddd;
 
-    min-width:
-        180px;
+    border-radius: 4px;
 
-    background-color:
-        var(--white);
-
-    border:
-        1px solid #dddddd;
-
-    border-radius:
-        3px;
-
-    box-shadow:
-        0 5px 15px rgba(0, 0, 0, 0.15);
-
-    z-index:
-        1100;
-
-    overflow:
-        hidden;
-
-}
-
-
-.nested-dropdown-content a {
-
-    display:
-        block;
-
-    padding:
-        10px 12px;
-
-    color:
-        #333333;
-
-    text-decoration:
-        none;
-
-    font-size:
-        12px;
-
-    border-bottom:
-        1px solid #eeeeee;
-
-}
-
-
-.nested-dropdown-content a:last-child {
-
-    border-bottom:
-        none;
-
-}
-
-
-.nested-dropdown-content a:hover {
-
-    background-color:
-        #f1f3f7;
-
-    color:
-        var(--royal-blue);
-
-}
-
-
-.nested-dropdown:hover .nested-dropdown-content {
-
-    display:
-        block;
-
-}
-
-
-
-/* =========================================
-   SLIDESHOW
-   ========================================= */
-
-.slideshow {
-
-    position:
-        relative;
-
-    max-width:
-        1200px;
-
-    height:
-        360px;
-
-    margin:
-        14px auto 18px;
-
-    overflow:
-        hidden;
-
-    border-radius:
-        6px;
-
-    background-color:
-        #e2e2e2;
-
+    margin-bottom: 18px;
 }
 
 
 .slides {
-
-    width:
-        100%;
-
-    height:
-        100%;
-
-    position:
-        relative;
-
+    width: 100%;
+    height: 100%;
 }
 
 
 .slide {
+    display: none;
 
-    position:
-        absolute;
-
-    width:
-        100%;
-
-    height:
-        100%;
-
-    object-fit:
-        cover;
-
-    left:
-        0;
-
-    top:
-        0;
-
-    opacity:
-        0;
-
-    animation:
-        slideshow 20s infinite;
-
+    width: 100%;
+    height: 100%;
 }
 
 
-.slide:nth-child(1) {
-
-    animation-delay:
-        0s;
-
+.slide.active {
+    display: block;
 }
 
 
-.slide:nth-child(2) {
+.slide img {
+    width: 100%;
+    height: 100%;
 
-    animation-delay:
-        5s;
+    object-fit: cover;
 
+    display: block;
 }
 
 
-.slide:nth-child(3) {
+/* SLIDER BUTTONS */
 
-    animation-delay:
-        10s;
+.slider-btn {
+    position: absolute;
 
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 34px;
+    height: 34px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(60, 60, 60, 0.55);
+
+    color: white;
+
+    font-size: 25px;
+
+    line-height: 30px;
+
+    cursor: pointer;
+
+    z-index: 10;
 }
 
 
-.slide:nth-child(4) {
-
-    animation-delay:
-        15s;
-
+.slider-btn:hover {
+    background: rgba(40, 40, 40, 0.8);
 }
 
 
-@keyframes slideshow {
-
-    0% {
-        opacity: 0;
-    }
-
-    5% {
-        opacity: 1;
-    }
-
-    25% {
-        opacity: 1;
-    }
-
-    30% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 0;
-    }
-
+.slider-btn.prev {
+    left: 12px;
 }
 
+
+.slider-btn.next {
+    right: 12px;
+}
+
+
+/* SLIDER DOTS */
+
+.slider-dots {
+    position: absolute;
+
+    bottom: 10px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    gap: 6px;
+
+    z-index: 10;
+}
+
+
+.dot {
+    width: 7px;
+    height: 7px;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+
+.dot.active {
+    background: #ffffff;
+}
 
 
 /* =========================================
-   SLIDESHOW ARROWS
-   ========================================= */
+   WELCOME HERO
+========================================= */
 
-.slide-arrow {
+.welcome-hero {
+    background: linear-gradient(
+        110deg,
+        #693d2b,
+        #343f78
+    );
 
-    position:
-        absolute;
+    color: #ffffff;
 
-    top:
-        50%;
+    text-align: center;
 
-    transform:
-        translateY(-50%);
+    padding: 36px 25px;
 
-    width:
-        34px;
+    border-radius: 5px;
 
-    height:
-        34px;
-
-    border:
-        none;
-
-    border-radius:
-        50%;
-
-    background:
-        rgba(0, 0, 0, 0.40);
-
-    color:
-        white;
-
-    font-size:
-        27px;
-
-    line-height:
-        30px;
-
-    cursor:
-        pointer;
-
-    z-index:
-        5;
-
+    margin-bottom: 18px;
 }
 
 
-.slide-arrow:hover {
+.welcome-hero h2 {
+    margin: 0 0 10px;
 
-    background:
-        rgba(0, 0, 0, 0.65);
-
+    font-size: 28px;
 }
 
 
-.slide-arrow.prev {
+.welcome-hero p {
+    margin: 0 auto 18px;
 
-    left:
-        12px;
+    font-size: 12px;
 
+    max-width: 700px;
 }
 
-
-.slide-arrow.next {
-
-    right:
-        12px;
-
-}
-
-
-
-/* =========================================
-   SLIDE INDICATORS
-   ========================================= */
-
-.slide-indicators {
-
-    position:
-        absolute;
-
-    bottom:
-        10px;
-
-    left:
-        50%;
-
-    transform:
-        translateX(-50%);
-
-    display:
-        flex;
-
-    gap:
-        6px;
-
-    z-index:
-        5;
-
-}
-
-
-.indicator {
-
-    width:
-        7px;
-
-    height:
-        7px;
-
-    border-radius:
-        50%;
-
-    background:
-        rgba(255, 255, 255, 0.75);
-
-}
-
-
-
-/* =========================================
-   HERO
-   ========================================= */
-
-.hero {
-
-    max-width:
-        1200px;
-
-    margin:
-        0 auto 18px;
-
-    padding:
-        38px 35px;
-
-    background:
-        linear-gradient(
-            110deg,
-            var(--choco-brown),
-            #443b50,
-            var(--royal-blue)
-        );
-
-    border-radius:
-        6px;
-
-    text-align:
-        center;
-
-    color:
-        white;
-
-}
-
-
-.hero-content h2 {
-
-    margin:
-        0 0 12px;
-
-    color:
-        white;
-
-    font-size:
-        30px;
-
-}
-
-
-.hero-content p {
-
-    margin:
-        0 auto 20px;
-
-    max-width:
-        850px;
-
-    color:
-        white;
-
-    font-size:
-        14px;
-
-    line-height:
-        1.5;
-
-}
-
-
-
-/* =========================================
-   HERO BUTTONS
-   ========================================= */
 
 .hero-buttons {
+    display: flex;
 
-    display:
-        flex;
+    justify-content: center;
 
-    justify-content:
-        center;
-
-    gap:
-        10px;
-
-    flex-wrap:
-        wrap;
-
+    gap: 8px;
 }
 
 
-.hero-buttons a {
+.hero-btn {
+    background: #ffffff;
 
-    display:
-        inline-block;
+    color: #333;
 
-    padding:
-        10px 18px;
+    padding: 9px 18px;
 
-    background:
-        white;
+    border-radius: 3px;
 
-    color:
-        var(--dark-brown);
+    font-size: 11px;
 
-    text-decoration:
-        none;
-
-    border-radius:
-        4px;
-
-    font-weight:
-        bold;
-
-    font-size:
-        12px;
-
+    font-weight: bold;
 }
 
 
-.hero-buttons a:hover {
-
-    background:
-        #eeeeee;
-
-    color:
-        var(--royal-blue);
-
+.hero-btn:hover {
+    background: #eeeeee;
 }
-
 
 
 /* =========================================
-   GENERAL CONTENT SECTIONS
-   ========================================= */
+   CONTENT SECTIONS
+========================================= */
 
 .content-section {
+    background: #ffffff;
 
-    max-width:
-        1200px;
+    border-radius: 5px;
 
-    margin:
-        0 auto 18px;
+    padding: 28px;
 
-    padding:
-        34px 35px;
-
-    background:
-        white;
-
-    border-radius:
-        6px;
-
+    margin-bottom: 18px;
 }
 
 
-.content-section h2 {
+.section-heading {
+    text-align: center;
 
-    margin:
-        0 0 10px;
-
-    color:
-        var(--choco-brown);
-
-    font-size:
-        25px;
-
-    text-align:
-        center;
-
+    margin-bottom: 20px;
 }
 
 
-.section-description {
+.section-heading h2 {
+    margin: 0 0 8px;
 
-    margin:
-        0 auto 22px;
+    color: #743d25;
 
-    text-align:
-        center;
-
-    color:
-        #555555;
-
-    font-size:
-        12px;
-
-    line-height:
-        1.5;
-
+    font-size: 22px;
 }
 
+
+.section-heading p {
+    margin: 0;
+
+    color: #555;
+
+    font-size: 11px;
+}
 
 
 /* =========================================
    LATEST UPDATES
-   ========================================= */
+========================================= */
 
 .updates-grid {
-
-    display:
-        grid;
+    display: grid;
 
     grid-template-columns:
         repeat(3, 1fr);
 
-    gap:
-        10px;
-
+    gap: 8px;
 }
 
 
 .update-column {
+    border: 1px solid #d4d4d4;
 
-    border:
-        1px solid #d8d8d8;
-
-    background:
-        white;
-
+    background: #ffffff;
 }
 
 
 .update-header {
+    background: #707980;
 
-    padding:
-        8px;
+    color: #ffffff;
 
-    background:
-        #6f7880;
+    text-align: center;
 
-    color:
-        white;
+    padding: 7px;
 
-    text-align:
-        center;
+    font-size: 11px;
 
-    font-size:
-        12px;
-
-    font-weight:
-        bold;
-
+    font-weight: bold;
 }
 
 
 .update-item {
+    padding: 12px;
 
-    padding:
-        10px 12px;
-
-    border-bottom:
-        1px solid #dddddd;
-
+    border-bottom: 1px solid #ddd;
 }
 
 
 .update-item:last-child {
-
-    border-bottom:
-        none;
-
+    border-bottom: none;
 }
 
 
 .update-item h3 {
+    margin: 0 0 3px;
 
-    margin:
-        0 0 3px;
+    font-size: 11px;
 
-    color:
-        #333333;
-
-    font-size:
-        12px;
-
+    color: #222;
 }
 
 
 .update-date {
+    display: block;
 
-    display:
-        block;
+    margin-bottom: 4px;
 
-    margin-bottom:
-        5px;
+    color: #31558f;
 
-    color:
-        var(--royal-blue);
-
-    font-size:
-        10px;
-
+    font-size: 9px;
 }
 
 
 .update-item p {
+    margin: 0;
 
-    margin:
-        0;
+    color: #555;
 
-    color:
-        #555555;
+    font-size: 10px;
 
-    font-size:
-        10px;
-
-    line-height:
-        1.4;
-
+    line-height: 1.4;
 }
-
 
 
 /* =========================================
    CONTACT
-   ========================================= */
+========================================= */
 
 .contact-grid {
-
-    display:
-        grid;
+    display: grid;
 
     grid-template-columns:
         repeat(3, 1fr);
 
-    gap:
-        14px;
+    gap: 12px;
 
-    max-width:
-        850px;
+    max-width: 900px;
 
-    margin:
-        0 auto;
-
+    margin: 0 auto;
 }
 
 
 .contact-card {
+    background: #f5f7fa;
 
-    padding:
-        20px 15px;
+    border-top: 2px solid #31558f;
 
-    background:
-        var(--light-card);
+    padding: 20px 15px;
 
-    border-top:
-        3px solid var(--royal-blue);
+    text-align: center;
 
-    text-align:
-        center;
-
-    min-height:
-        120px;
-
+    min-height: 120px;
 }
 
 
 .contact-icon {
+    font-size: 18px;
 
-    font-size:
-        18px;
-
-    margin-bottom:
-        7px;
-
+    margin-bottom: 8px;
 }
 
 
 .contact-card h3 {
+    margin: 0 0 8px;
 
-    margin:
-        0 0 8px;
-
-    color:
-        #333333;
-
-    font-size:
-        14px;
-
+    font-size: 13px;
 }
 
 
 .contact-card p {
+    margin: 0;
 
-    margin:
-        0;
+    font-size: 10px;
 
-    color:
-        #555555;
+    line-height: 1.5;
 
-    font-size:
-        11px;
-
-    line-height:
-        1.5;
-
+    color: #444;
 }
-
-
-.contact-card a {
-
-    color:
-        var(--royal-blue);
-
-    text-decoration:
-        none;
-
-    font-weight:
-        bold;
-
-}
-
-
-
-/* =========================================
-   SEARCH
-   ========================================= */
-
-.search-section {
-
-    text-align:
-        center;
-
-}
-
-
-.search-box {
-
-    display:
-        flex;
-
-    max-width:
-        650px;
-
-    margin:
-        0 auto;
-
-}
-
-
-.search-box input {
-
-    flex:
-        1;
-
-    padding:
-        11px 14px;
-
-    border:
-        1px solid #cccccc;
-
-    border-radius:
-        4px 0 0 4px;
-
-    font-size:
-        12px;
-
-    outline:
-        none;
-
-}
-
-
-.search-box input:focus {
-
-    border-color:
-        var(--royal-blue);
-
-}
-
-
-.search-box button {
-
-    padding:
-        11px 20px;
-
-    border:
-        none;
-
-    border-radius:
-        0 4px 4px 0;
-
-    background:
-        var(--royal-blue);
-
-    color:
-        white;
-
-    font-size:
-        12px;
-
-    font-weight:
-        bold;
-
-    cursor:
-        pointer;
-
-}
-
-
-.search-box button:hover {
-
-    background:
-        var(--choco-brown);
-
-}
-
 
 
 /* =========================================
    FOOTER
-   ========================================= */
+========================================= */
 
-footer {
+.site-footer {
+    background: #31558f;
 
-    margin-top:
-        30px;
+    color: #ffffff;
 
-    padding:
-        18px;
+    text-align: center;
 
-    background:
-        var(--royal-blue);
+    padding: 14px;
 
-    color:
-        white;
-
-    text-align:
-        center;
-
+    font-size: 10px;
 }
 
 
-footer p {
-
-    margin:
-        0;
-
-    color:
-        white;
-
-    font-size:
-        11px;
-
+.site-footer p {
+    margin: 0;
 }
-
 
 
 /* =========================================
-   MOBILE RESPONSIVE
-   ========================================= */
+   RESPONSIVE
+========================================= */
 
-@media (max-width: 768px) {
-
-
-    /* HEADER */
+@media (max-width: 900px) {
 
     .header-inner {
-
-        padding:
-            12px 15px;
-
+        padding-left: 15px;
+        padding-right: 15px;
     }
-
-
-    .school-logo {
-
-        width:
-            55px;
-
-        height:
-            55px;
-
-    }
-
-
-    .school-title h1 {
-
-        font-size:
-            18px;
-
-    }
-
-
-    .school-title p {
-
-        font-size:
-            10px;
-
-    }
-
-
-
-    /* NAVIGATION */
 
     .main-nav {
-
-        padding:
-            0 10px 8px;
-
-        flex-wrap:
-            wrap;
-
-        justify-content:
-            center;
-
+        flex-wrap: wrap;
     }
 
-
-    .main-nav > a,
-    .dropbtn {
-
-        padding:
-            9px 8px;
-
-        font-size:
-            11px;
-
+    .nav-search {
+        margin-left: 0;
+        margin-top: 5px;
     }
 
-
-
-    /* DROPDOWN */
-
-    .dropdown-content {
-
-        min-width:
-            190px;
-
+    main {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
-
-    .nested-dropdown-content {
-
-        position:
-            static;
-
-        margin-left:
-            15px;
-
-        box-shadow:
-            none;
-
-        border:
-            none;
-
-        border-left:
-            2px solid var(--royal-blue);
-
+    .hero-slider {
+        height: 320px;
     }
-
-
-
-    /* SLIDESHOW */
-
-    .slideshow {
-
-        margin:
-            10px 12px 15px;
-
-        height:
-            220px;
-
-    }
-
-
-
-    /* HERO */
-
-    .hero {
-
-        margin:
-            0 12px 15px;
-
-        padding:
-            30px 18px;
-
-    }
-
-
-    .hero-content h2 {
-
-        font-size:
-            24px;
-
-    }
-
-
-    .hero-content p {
-
-        font-size:
-            12px;
-
-    }
-
-
-
-    /* CONTENT */
-
-    .content-section {
-
-        margin-left:
-            12px;
-
-        margin-right:
-            12px;
-
-        padding:
-            28px 15px;
-
-    }
-
-
-    .content-section h2 {
-
-        font-size:
-            22px;
-
-    }
-
-
-
-    /* UPDATES */
 
     .updates-grid {
-
-        grid-template-columns:
-            1fr;
-
+        grid-template-columns: 1fr;
     }
-
-
-
-    /* CONTACT */
 
     .contact-grid {
-
-        grid-template-columns:
-            1fr;
-
+        grid-template-columns: 1fr;
     }
 
+}
 
 
-    /* SEARCH */
+@media (max-width: 600px) {
 
-    .search-box {
-
-        flex-direction:
-            column;
-
+    .school-brand {
+        align-items: flex-start;
     }
 
-
-    .search-box input {
-
-        border-radius:
-            4px;
-
-        margin-bottom:
-            8px;
-
+    .school-logo {
+        width: 48px;
+        height: 48px;
     }
 
+    .school-name h1 {
+        font-size: 17px;
+    }
 
-    .search-box button {
+    .main-nav {
+        gap: 0;
+    }
 
-        border-radius:
-            4px;
+    .main-nav > a,
+    .nav-dropbtn {
+        padding: 8px 7px;
+        font-size: 10px;
+    }
 
+    .nav-search {
+        width: 100%;
+    }
+
+    .nav-search input {
+        flex: 1;
+        width: auto;
+    }
+
+    .hero-slider {
+        height: 230px;
+    }
+
+    .welcome-hero h2 {
+        font-size: 22px;
+    }
+
+    .welcome-hero p {
+        font-size: 10px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-section {
+        padding: 20px 12px;
     }
 
 }
