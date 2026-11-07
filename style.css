@@ -1,67 +1,112 @@
-/* =========================================
+/* =========================================================
    MABOLO NATIONAL HIGH SCHOOL
    Main Website Styles
-   ========================================= */
+   ========================================================= */
 
 
-/* =========================================
+/* =========================================================
    SCHOOL COLORS
-   ========================================= */
+   ========================================================= */
 
 :root {
     --choco-brown: #633a28;
-    --royal-blue: #304f8c;
     --dark-brown: #4f2d1f;
-    --light-background: #f5f7fa;
+    --royal-blue: #304f8c;
+    --light-blue: #f5f7fa;
     --white: #ffffff;
     --text-color: #444;
+    --border-color: #dddddd;
 }
 
 
-/* =========================================
+/* =========================================================
    BASIC PAGE SETTINGS
-   ========================================= */
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--light-background);
+    background-color: var(--light-blue);
     color: var(--text-color);
 }
 
 
-/* =========================================
+/* =========================================================
    HEADER
-   ========================================= */
+   ========================================================= */
 
 .site-header {
-    text-align: center;
-    padding-top: 20px;
+    width: 100%;
+    background-color: var(--white);
+    padding: 18px 40px 12px;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 
-/* =========================================
-   SCHOOL LOGO
-   ========================================= */
+/* =========================================================
+   HEADER TOP
+   SCHOOL LOGO + SCHOOL NAME
+   ========================================================= */
+
+.header-top {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+
+/* School logo */
 
 .school-logo {
-    width: 150px;
-    height: auto;
-    display: block;
-    margin: 0 auto 15px;
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 
-/* =========================================
+/* School name */
+
+.school-name {
+    text-align: left;
+}
+
+.school-name h1 {
+    margin: 0 0 5px;
+    color: var(--dark-brown);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.school-name p {
+    margin: 0;
+    color: #555;
+    font-size: 14px;
+}
+
+
+/* =========================================================
    MAIN NAVIGATION
-   ========================================= */
+   ========================================================= */
 
 .main-nav {
+    max-width: 1250px;
+    margin: 12px auto 0;
+
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 5px;
-    margin: 10px auto 35px;
+    gap: 4px;
+
     flex-wrap: wrap;
 }
 
@@ -71,14 +116,15 @@ body {
 .main-nav > a,
 .dropbtn {
     display: block;
-    padding: 12px 16px;
+
+    padding: 11px 14px;
 
     color: var(--dark-brown);
 
     text-decoration: none;
 
+    font-size: 15px;
     font-weight: bold;
-    font-size: 17px;
 
     transition: 0.2s ease;
 }
@@ -92,9 +138,9 @@ body {
 }
 
 
-/* =========================================
+/* =========================================================
    DROPDOWN MENU
-   ========================================= */
+   ========================================================= */
 
 .dropdown {
     position: relative;
@@ -102,15 +148,15 @@ body {
 }
 
 
-/* Small arrow */
+/* Arrow */
 
 .dropbtn span {
-    font-size: 12px;
+    font-size: 11px;
     margin-left: 3px;
 }
 
 
-/* Dropdown box */
+/* Dropdown container */
 
 .dropdown-content {
     display: none;
@@ -118,15 +164,13 @@ body {
     position: absolute;
 
     top: 100%;
-    left: 50%;
+    left: 0;
 
-    transform: translateX(-50%);
-
-    min-width: 240px;
+    min-width: 245px;
 
     background-color: var(--white);
 
-    border-radius: 6px;
+    border-radius: 4px;
 
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 
@@ -143,13 +187,13 @@ body {
 .dropdown-content a {
     display: block;
 
-    padding: 12px 16px;
+    padding: 12px 15px;
 
     color: #444;
 
     text-decoration: none;
 
-    font-size: 15px;
+    font-size: 14px;
 
     font-weight: normal;
 
@@ -157,7 +201,7 @@ body {
 }
 
 
-/* Remove border from last item */
+/* Last item */
 
 .dropdown-content a:last-child {
     border-bottom: none;
@@ -179,25 +223,127 @@ body {
 }
 
 
-/* =========================================
-   SEARCH LINK
-   ========================================= */
+/* =========================================================
+   IMAGE SLIDER
+   ========================================================= */
 
-.search-link {
-    white-space: nowrap;
+.school-slider {
+    max-width: 1250px;
+
+    margin: 20px auto 30px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background-color: #ddd;
+
+    border-radius: 4px;
 }
 
 
-/* =========================================
+/* Slider images */
+
+.school-slider img {
+    width: 100%;
+    height: 420px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* Slider arrows */
+
+.slider-arrow {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    z-index: 5;
+}
+
+
+.slider-arrow:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+
+.slider-prev {
+    left: 15px;
+}
+
+
+.slider-next {
+    right: 15px;
+}
+
+
+/* Slider dots */
+
+.slider-dots {
+    position: absolute;
+
+    bottom: 12px;
+
+    left: 0;
+    right: 0;
+
+    text-align: center;
+
+    z-index: 5;
+}
+
+
+.slider-dot {
+    display: inline-block;
+
+    width: 9px;
+    height: 9px;
+
+    margin: 0 4px;
+
+    border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 0.7);
+
+    cursor: pointer;
+}
+
+
+.slider-dot.active {
+    background-color: white;
+}
+
+
+/* =========================================================
    HERO SECTION
-   ========================================= */
+   ========================================================= */
 
 .hero {
-    max-width: 1200px;
+    max-width: 1250px;
 
-    margin: 0 auto 32px;
+    margin: 0 auto 30px;
 
-    padding: 65px 40px;
+    padding: 60px 40px;
 
     background: linear-gradient(
         110deg,
@@ -206,48 +352,44 @@ body {
         var(--royal-blue)
     );
 
-    border-radius: 10px;
+    border-radius: 8px;
 
     text-align: center;
 
     color: white;
-
-    box-sizing: border-box;
 }
 
 
-.hero-content h1 {
+.hero-content h2 {
+    margin: 0 0 15px;
+
     color: white;
 
-    font-size: 42px;
-
-    margin: 0 0 20px;
+    font-size: 40px;
 }
 
 
 .hero-content p {
-    color: white;
-
-    font-size: 18px;
-
     max-width: 850px;
 
-    margin: 0 auto 30px;
+    margin: 0 auto 25px;
+
+    color: white;
+
+    font-size: 17px;
 
     line-height: 1.6;
 }
 
 
-/* =========================================
-   HERO BUTTONS
-   ========================================= */
+/* Hero buttons */
 
 .hero-buttons {
     display: flex;
 
     justify-content: center;
 
-    gap: 15px;
+    gap: 12px;
 
     flex-wrap: wrap;
 }
@@ -256,15 +398,17 @@ body {
 .hero-buttons a {
     display: inline-block;
 
-    padding: 12px 22px;
+    padding: 11px 20px;
 
-    background: white;
+    background-color: white;
 
     color: var(--dark-brown);
 
     text-decoration: none;
 
-    border-radius: 6px;
+    border-radius: 5px;
+
+    font-size: 14px;
 
     font-weight: bold;
 
@@ -273,35 +417,33 @@ body {
 
 
 .hero-buttons a:hover {
-    background: #eeeeee;
+    background-color: #eeeeee;
 
     color: var(--royal-blue);
 }
 
 
-/* =========================================
-   CONTENT SECTIONS
-   ========================================= */
+/* =========================================================
+   GENERAL CONTENT SECTION
+   ========================================================= */
 
 .content-section {
-    max-width: 1200px;
+    max-width: 1250px;
 
-    margin: 0 auto 32px;
+    margin: 0 auto 30px;
 
-    padding: 55px 40px;
+    padding: 50px 40px;
 
-    background: white;
+    background-color: var(--white);
 
-    border-radius: 10px;
-
-    box-sizing: border-box;
+    border-radius: 8px;
 
     text-align: center;
 }
 
 
 .content-section h2 {
-    margin-top: 0;
+    margin: 0 0 12px;
 
     color: var(--choco-brown);
 
@@ -310,44 +452,143 @@ body {
 
 
 .content-section > p {
+    margin: 0 auto;
+
+    max-width: 850px;
+
     color: #555;
 
-    font-size: 16px;
+    font-size: 15px;
 
     line-height: 1.6;
 }
 
 
-/* =========================================
-   SCHOOL DETAILS
-   ========================================= */
+/* =========================================================
+   LATEST UPDATES
+   EVENTS / ANNOUNCEMENTS / NEWS
+   ========================================================= */
 
-.school-details {
+.updates-grid {
+    max-width: 1050px;
+
+    margin: 30px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 14px;
+
+    text-align: left;
+}
+
+
+/* Individual update column */
+
+.update-column {
+    border: 1px solid var(--border-color);
+
+    background-color: white;
+
+    min-height: 300px;
+}
+
+
+/* Column heading */
+
+.update-column h3 {
+    margin: 0;
+
+    padding: 10px;
+
+    background-color: #6c757d;
+
+    color: white;
+
+    text-align: center;
+
+    font-size: 16px;
+
+    text-transform: uppercase;
+}
+
+
+/* Update items */
+
+.update-item {
+    padding: 15px;
+
+    border-bottom: 1px solid #dddddd;
+}
+
+
+.update-item:last-child {
+    border-bottom: none;
+}
+
+
+.update-item h4 {
+    margin: 0 0 5px;
+
+    color: var(--dark-brown);
+
+    font-size: 14px;
+}
+
+
+.update-date {
+    margin: 0 0 7px;
+
+    color: var(--royal-blue);
+
+    font-size: 12px;
+}
+
+
+.update-item p {
+    margin: 0;
+
+    color: #555;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   SCHOOL PROGRAMS
+   ========================================================= */
+
+.programs-grid {
+    max-width: 1050px;
+
+    margin: 30px auto 0;
+
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
 
     gap: 20px;
-
-    margin-top: 35px;
 }
 
 
-.detail-card {
+.program-card {
     padding: 25px 20px;
 
-    background: #f5f7fa;
+    background-color: var(--light-blue);
 
     border-top: 4px solid var(--royal-blue);
 
-    border-radius: 6px;
+    border-radius: 5px;
 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
 }
 
 
-.detail-card h3 {
-    margin: 10px 0;
+.program-card h3 {
+    margin: 0 0 10px;
 
     color: var(--dark-brown);
 
@@ -355,56 +596,99 @@ body {
 }
 
 
-.detail-card p {
+.program-card p {
     margin: 0;
 
     color: #555;
 
-    font-size: 16px;
+    font-size: 14px;
+
+    line-height: 1.5;
 }
 
 
-/* =========================================
-   ANNOUNCEMENTS
-   ========================================= */
+/* =========================================================
+   VISIT / CONTACT
+   ========================================================= */
 
-.announcement-box {
-    max-width: 750px;
+.contact-grid {
+    max-width: 1050px;
 
-    margin: 35px auto 0;
+    margin: 30px auto 0;
 
-    padding: 25px;
+    display: grid;
 
-    background: #f5f7fa;
+    grid-template-columns: repeat(3, 1fr);
 
-    border-left: 5px solid var(--royal-blue);
-
-    text-align: left;
+    gap: 20px;
 }
 
 
-.announcement-box h3 {
-    margin-top: 0;
+.contact-card {
+    padding: 25px 20px;
+
+    background-color: var(--light-blue);
+
+    border-top: 4px solid var(--royal-blue);
+
+    border-radius: 5px;
+
+    text-align: center;
+}
+
+
+.contact-icon {
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+
+.contact-card h3 {
+    margin: 0 0 10px;
 
     color: var(--dark-brown);
+
+    font-size: 17px;
 }
 
 
-.announcement-box p {
-    text-align: left;
+.contact-card p {
+    margin: 0;
 
+    color: #555;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+.contact-card a {
+    color: var(--royal-blue);
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   SEARCH SECTION
+   ========================================================= */
+
+.search-section {
     margin-bottom: 0;
 }
 
 
-/* =========================================
-   SEARCH SECTION
-   ========================================= */
-
 .search-box {
     display: flex;
-
-    justify-content: center;
 
     max-width: 650px;
 
@@ -415,17 +699,17 @@ body {
 .search-box input {
     flex: 1;
 
-    padding: 14px 16px;
+    padding: 13px 15px;
 
     border: 1px solid #ccc;
 
-    border-radius: 6px 0 0 6px;
+    border-right: none;
 
-    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+
+    font-size: 15px;
 
     outline: none;
-
-    box-sizing: border-box;
 }
 
 
@@ -435,17 +719,17 @@ body {
 
 
 .search-box button {
-    padding: 14px 22px;
+    padding: 13px 22px;
 
     border: none;
 
-    border-radius: 0 6px 6px 0;
+    border-radius: 0 5px 5px 0;
 
     background-color: var(--royal-blue);
 
     color: white;
 
-    font-size: 16px;
+    font-size: 15px;
 
     font-weight: bold;
 
@@ -458,12 +742,12 @@ body {
 }
 
 
-/* =========================================
+/* =========================================================
    FOOTER
-   ========================================= */
+   ========================================================= */
 
 footer {
-    margin-top: 50px;
+    margin-top: 30px;
 
     padding: 22px;
 
@@ -482,192 +766,126 @@ footer p {
 
     font-size: 14px;
 }
-/* =========================================
-   EVENTS, ANNOUNCEMENTS & NEWS
-   ========================================= */
 
-.updates-section {
-    max-width: 1200px;
 
-    margin: 0 auto 32px;
-
-    padding: 55px 40px;
-
-    background: white;
-
-    border-radius: 10px;
-
-    box-sizing: border-box;
-
-    text-align: center;
-}
-
-
-.updates-section h2 {
-    margin-top: 0;
-
-    margin-bottom: 10px;
-
-    color: var(--choco-brown);
-
-    font-size: 30px;
-}
-
-
-.updates-intro {
-    margin-bottom: 35px;
-
-    color: #555;
-
-    font-size: 16px;
-
-    line-height: 1.6;
-}
-
-
-/* Three columns */
-
-.updates-grid {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 20px;
-
-    max-width: 1100px;
-
-    margin: 0 auto;
-}
-
-
-/* Individual column */
-
-.update-column {
-    border: 1px solid #ddd;
-
-    background: white;
-
-    overflow: hidden;
-
-    text-align: left;
-
-    border-radius: 4px;
-}
-
-
-/* Column heading */
-
-.update-header {
-    padding: 12px 15px;
-
-    background-color: #6c757d;
-
-    color: white;
-
-    font-size: 18px;
-
-    font-weight: bold;
-
-    text-align: center;
-
-    text-transform: uppercase;
-}
-
-
-/* List */
-
-.update-list {
-    padding: 0 15px;
-}
-
-
-/* Individual item */
-
-.update-item {
-    padding: 18px 5px;
-
-    border-bottom: 1px solid #e0e0e0;
-}
-
-
-.update-item:last-child {
-    border-bottom: none;
-}
-
-
-.update-item h3 {
-    margin: 0 0 7px;
-
-    color: var(--dark-brown);
-
-    font-size: 16px;
-}
-
-
-.update-item p {
-    margin: 5px 0;
-
-    color: #555;
-
-    font-size: 14px;
-
-    line-height: 1.5;
-}
-
-
-/* Date */
-
-.update-item .update-date {
-    color: var(--royal-blue);
-
-    font-size: 13px;
-
-    margin-bottom: 8px;
-}
-
-/* =========================================
+/* =========================================================
    MOBILE RESPONSIVE
-   ========================================= */
+   ========================================================= */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 
-       .updates-section {
+    .site-header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    .header-top {
+        justify-content: center;
+
+        text-align: center;
+    }
+
+
+    .school-name {
+        text-align: center;
+    }
+
+
+    .main-nav {
+        justify-content: center;
+    }
+
+
+    .school-slider {
         margin-left: 15px;
         margin-right: 15px;
+    }
 
-        padding: 40px 20px;
+
+    .school-slider img {
+        height: 330px;
+    }
+
+
+    .hero {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+
+    .content-section {
+        margin-left: 15px;
+        margin-right: 15px;
     }
 
 
     .updates-grid {
         grid-template-columns: 1fr;
-
-        gap: 20px;
     }
 
 
-    .update-header {
-        font-size: 17px;
+    .programs-grid {
+        grid-template-columns: 1fr;
     }
+
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE DEVICES
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .site-header {
+        padding-top: 15px;
+    }
+
+
+    .header-top {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+
     .school-logo {
-        width: 125px;
+        width: 80px;
+        height: 80px;
+    }
+
+
+    .school-name h1 {
+        font-size: 21px;
+    }
+
+
+    .school-name p {
+        font-size: 13px;
     }
 
 
     .main-nav {
         flex-direction: column;
 
-        gap: 0;
+        width: 100%;
 
-        margin-bottom: 25px;
+        margin-top: 15px;
     }
 
 
     .main-nav > a,
     .dropbtn {
-        padding: 9px 12px;
+        width: 100%;
 
-        font-size: 16px;
+        text-align: center;
+
+        padding: 10px;
     }
 
 
@@ -679,44 +897,58 @@ footer p {
     .dropdown-content {
         position: static;
 
+        width: 100%;
+
+        min-width: 0;
+
         transform: none;
 
-        width: 90%;
-
-        margin: 0 auto;
-
         box-shadow: none;
+
+        border: 1px solid #eeeeee;
+    }
+
+
+    .school-slider {
+        margin-top: 15px;
+    }
+
+
+    .school-slider img {
+        height: 230px;
+    }
+
+
+    .slider-arrow {
+        width: 35px;
+        height: 35px;
+
+        font-size: 20px;
     }
 
 
     .hero {
-        margin: 0 15px 25px;
-
         padding: 45px 20px;
     }
 
 
-    .hero-content h1 {
-        font-size: 30px;
+    .hero-content h2 {
+        font-size: 28px;
     }
 
 
     .hero-content p {
-        font-size: 16px;
+        font-size: 15px;
     }
 
 
     .content-section {
-        margin-left: 15px;
-
-        margin-right: 15px;
-
         padding: 40px 20px;
     }
 
 
-    .school-details {
-        grid-template-columns: 1fr;
+    .content-section h2 {
+        font-size: 25px;
     }
 
 
@@ -726,229 +958,15 @@ footer p {
 
 
     .search-box input {
-        border-radius: 6px;
+        border-right: 1px solid #ccc;
+
+        border-radius: 5px;
 
         margin-bottom: 10px;
     }
 
 
     .search-box button {
-        border-radius: 6px;
+        border-radius: 5px;
     }
-
-}
-/* =========================================
-   SCHOOL PROFILE
-   ========================================= */
-
-.school-profile-section {
-    scroll-margin-top: 20px;
-}
-
-.section-intro {
-    max-width: 800px;
-    margin: 0 auto 35px;
-    color: #555;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.profile-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.profile-card {
-    padding: 30px;
-    background: #f5f7fa;
-    border-radius: 8px;
-    border-top: 4px solid var(--royal-blue);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    text-align: left;
-}
-
-.profile-card h3 {
-    margin-top: 0;
-    margin-bottom: 25px;
-    color: var(--dark-brown);
-    font-size: 20px;
-}
-
-.profile-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 14px 0;
-    border-bottom: 1px solid #ddd;
-}
-
-.profile-row:last-child {
-    border-bottom: none;
-}
-
-.profile-row strong {
-    color: var(--dark-brown);
-}
-
-.profile-row span {
-    color: #555;
-    text-align: right;
-}
-
-.profile-location {
-    display: flex;
-    align-items: flex-start;
-    gap: 18px;
-}
-
-.location-icon {
-    font-size: 30px;
-}
-
-.profile-location strong {
-    color: var(--dark-brown);
-}
-
-.profile-location p {
-    margin-top: 8px;
-    color: #555;
-    line-height: 1.6;
-}
-
-
-/* =========================================
-   DOWNLOADS
-   ========================================= */
-
-.download-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    max-width: 1050px;
-    margin: 35px auto 0;
-}
-
-.download-card {
-    padding: 30px 20px;
-    background: #f5f7fa;
-    border-top: 4px solid var(--royal-blue);
-    border-radius: 7px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-}
-
-.download-icon {
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-.download-card h3 {
-    color: var(--dark-brown);
-    margin: 10px 0;
-}
-
-.download-card p {
-    color: #555;
-    font-size: 14px;
-    line-height: 1.5;
-    min-height: 65px;
-}
-
-.download-card a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 18px;
-    background-color: var(--royal-blue);
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-.download-card a:hover {
-    background-color: var(--choco-brown);
-}
-
-
-/* =========================================
-   VISIT / CONTACT
-   ========================================= */
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    max-width: 1050px;
-    margin: 35px auto 0;
-}
-
-.contact-card {
-    padding: 30px 20px;
-    background: #f5f7fa;
-    border-top: 4px solid var(--royal-blue);
-    border-radius: 7px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-}
-
-.contact-icon {
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-.contact-card h3 {
-    color: var(--dark-brown);
-    margin: 10px 0;
-}
-
-.contact-card p {
-    color: #555;
-    line-height: 1.6;
-}
-
-.contact-card a {
-    color: var(--royal-blue);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.contact-card a:hover {
-    color: var(--choco-brown);
-    text-decoration: underline;
-}
-
-
-/* =========================================
-   MOBILE - PROFILE, DOWNLOADS & CONTACT
-   ========================================= */
-
-@media (max-width: 768px) {
-
-    .profile-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .profile-card {
-        padding: 25px 20px;
-    }
-
-    .profile-row {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .profile-row span {
-        text-align: left;
-    }
-
-    .download-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
 }
