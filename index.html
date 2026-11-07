@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,139 +11,239 @@
 
 <body>
 
-    <!-- SCHOOL LOGO -->
-    <header class="site-header">
-        <img src="images/logo.png" alt="Mabolo National High School Logo">
+<!-- SCHOOL LOGO -->
+<header class="site-header">
 
-        <!-- NAVIGATION -->
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About Us</a>
-            <a href="#announcements">Announcements</a>
-            <a href="#programs">Programs</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+    <img 
+        src="images/logo.png" 
+        alt="Mabolo National High School Logo"
+        class="school-logo"
+    >
 
+    <!-- NAVIGATION -->
+    <nav class="main-nav">
 
-    <!-- HERO SECTION -->
-    <section class="hero" id="home">
+        <a href="#home">Home</a>
 
-        <div class="hero-content">
+        <!-- ABOUT US -->
+        <div class="dropdown">
+            <a href="#about" class="dropbtn">
+                About Us <span>▾</span>
+            </a>
 
-            <h1>Welcome to Mabolo National High School</h1>
-
-            <p>
-                Official website and information portal of
-                Mabolo National High School, Naga City, Camarines Sur.
-            </p>
-
-            <div class="hero-buttons">
-                <a href="#announcements">View Announcements</a>
-                <a href="#about">Learn About Our School</a>
+            <div class="dropdown-content">
+                <a href="#school-profile">School Profile</a>
+                <a href="#vision-mission">Vision, Mission & Core Values</a>
+                <a href="#history">School History</a>
+                <a href="#organizational-structure">Organizational Structure</a>
+                <a href="#faculty">Faculty & Staff</a>
+                <a href="#school-heads">School Heads</a>
             </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ABOUT SECTION -->
-    <section class="about-section" id="about">
-
-        <div class="section-heading">
-            <h2>About Mabolo National High School</h2>
-
-            <p>
-                Mabolo National High School is a public secondary school
-                serving learners in Naga City, Camarines Sur.
-            </p>
         </div>
 
 
-        <!-- SCHOOL INFORMATION -->
-        <div class="school-details">
+        <!-- REPORT -->
+        <div class="dropdown">
+            <a href="#report" class="dropbtn">
+                Report <span>▾</span>
+            </a>
 
-            <div class="info-card">
-                <h3>School ID</h3>
-                <p>306352</p>
+            <div class="dropdown-content">
+                <a href="#school-report-card">School Report Card</a>
+                <a href="#mooe">MOOE Disbursement</a>
+                <a href="#financial-report">Financial Report</a>
+                <a href="#school-development-plan">School Development Plan</a>
+                <a href="#sesa">SESA</a>
             </div>
+        </div>
 
-            <div class="info-card">
-                <h3>Location</h3>
-                <p>Naga City, Camarines Sur</p>
+
+        <!-- PROGRAMS -->
+        <div class="dropdown">
+            <a href="#programs" class="dropbtn">
+                Programs <span>▾</span>
+            </a>
+
+            <div class="dropdown-content">
+                <a href="#school-programs">School Programs</a>
+                <a href="#student-organizations">Student Organizations</a>
+                <a href="#sslg">SSLG</a>
+                <a href="#ap-club">AP Club</a>
+                <a href="#school-activities">School Activities</a>
             </div>
+        </div>
 
-            <div class="info-card">
-                <h3>School Year</h3>
-                <p>2026–2027</p>
+
+        <!-- SCHOOL PAPER -->
+        <div class="dropdown">
+            <a href="#school-paper" class="dropbtn">
+                School Paper <span>▾</span>
+            </a>
+
+            <div class="dropdown-content">
+                <a href="#latest-issue">Latest Issue</a>
+                <a href="#archives">Archives</a>
             </div>
-
         </div>
 
-    </section>
+
+        <!-- SEARCH -->
+        <a href="#search" class="search-link">
+            🔍 Search
+        </a>
+
+    </nav>
+
+</header>
 
 
-    <!-- ANNOUNCEMENTS SECTION -->
-    <section class="announcements-section" id="announcements">
+<!-- HERO SECTION -->
+<section class="hero" id="home">
 
-        <div class="section-heading">
-            <h2>Latest Announcements</h2>
+    <div class="hero-content">
 
-            <p>
-                Stay updated with the latest announcements and activities
-                of Mabolo National High School.
-            </p>
-        </div>
+        <h1>Welcome to Mabolo National High School</h1>
 
-        <div class="announcement-card">
-            <h3>School Announcements</h3>
-            <p>
-                Important announcements and school activities will be
-                posted here.
-            </p>
-        </div>
-
-    </section>
-
-
-    <!-- PROGRAMS SECTION -->
-    <section class="programs-section" id="programs">
-
-        <div class="section-heading">
-            <h2>School Programs</h2>
-
-            <p>
-                Learn more about the programs, organizations, and activities
-                of Mabolo National High School.
-            </p>
-        </div>
-
-    </section>
-
-
-    <!-- CONTACT SECTION -->
-    <section class="contact-section" id="contact">
-
-        <div class="section-heading">
-            <h2>Contact Us</h2>
-
-            <p>
-                Mabolo National High School<br>
-                Naga City, Camarines Sur
-            </p>
-        </div>
-
-    </section>
-
-
-    <!-- FOOTER -->
-    <footer>
         <p>
-            © 2026 Mabolo National High School.
-            All Rights Reserved.
+            Official website and information portal of
+            Mabolo National High School, Naga City, Camarines Sur.
         </p>
-    </footer>
+
+        <div class="hero-buttons">
+
+            <a href="#announcements">
+                View Announcements
+            </a>
+
+            <a href="#about">
+                Learn About Our School
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT SECTION -->
+<section class="content-section about-section" id="about">
+
+    <h2>About Mabolo National High School</h2>
+
+    <p>
+        Mabolo National High School is a public secondary school
+        serving learners in Naga City, Camarines Sur.
+    </p>
+
+    <div class="school-details">
+
+        <div class="detail-card">
+            <h3>School ID</h3>
+            <p>306352</p>
+        </div>
+
+        <div class="detail-card">
+            <h3>Location</h3>
+            <p>Naga City, Camarines Sur</p>
+        </div>
+
+        <div class="detail-card">
+            <h3>School Year</h3>
+            <p>2026–2027</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ANNOUNCEMENTS PLACEHOLDER -->
+<section class="content-section" id="announcements">
+
+    <h2>Latest Announcements</h2>
+
+    <p>
+        Stay updated with the latest announcements and activities
+        of Mabolo National High School.
+    </p>
+
+    <div class="announcement-box">
+
+        <h3>School Announcements</h3>
+
+        <p>
+            Important announcements and school activities
+            will be posted here.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- PROGRAMS PLACEHOLDER -->
+<section class="content-section" id="programs">
+
+    <h2>School Programs</h2>
+
+    <p>
+        Learn more about the programs, organizations,
+        and activities of Mabolo National High School.
+    </p>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="content-section contact-section" id="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>
+        Mabolo National High School<br>
+        Naga City, Camarines Sur
+    </p>
+
+</section>
+
+
+<!-- SEARCH PLACEHOLDER -->
+<section class="content-section search-section" id="search">
+
+    <h2>Search the Website</h2>
+
+    <p>
+        Search for announcements, programs, reports,
+        school information, and other resources.
+    </p>
+
+    <div class="search-box">
+
+        <input 
+            type="text" 
+            placeholder="Search the website..."
+            aria-label="Search the website"
+        >
+
+        <button type="button">
+            Search
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 Mabolo National High School.
+        All Rights Reserved.
+    </p>
+
+</footer>
 
 </body>
 </html>
