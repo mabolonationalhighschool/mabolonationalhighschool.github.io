@@ -1,28 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Mabolo National High School</title>
 
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 
 <body>
 
-
-<!-- =====================================================
+<!-- =========================================
      HEADER
-     ===================================================== -->
+     ========================================= -->
 
 <header class="site-header">
 
-    <div class="header-top">
+    <div class="header-inner">
 
         <!-- SCHOOL LOGO -->
         <img
@@ -31,32 +26,22 @@
             class="school-logo"
         >
 
-
         <!-- SCHOOL NAME -->
-        <div class="school-name">
-
-            <h1>
-                Mabolo National High School
-            </h1>
-
-            <p>
-                School ID: 306352
-            </p>
-
+        <div class="school-title">
+            <h1>Mabolo National High School</h1>
+            <p>School ID: 306352</p>
         </div>
 
     </div>
 
 
-    <!-- =================================================
-         MAIN NAVIGATION
-         ================================================= -->
+    <!-- =========================================
+         NAVIGATION
+         ========================================= -->
 
     <nav class="main-nav">
 
-        <a href="#home">
-            Home
-        </a>
+        <a href="#home">Home</a>
 
 
         <!-- ABOUT US -->
@@ -133,7 +118,9 @@
         </div>
 
 
-        <!-- PROGRAMS -->
+        <!-- =========================================
+             PROGRAMS
+             ========================================= -->
 
         <div class="dropdown">
 
@@ -143,21 +130,42 @@
 
             <div class="dropdown-content">
 
+                <!-- SCHOOL PROGRAMS -->
+
                 <a href="#school-programs">
                     School Programs
                 </a>
 
-                <a href="#student-organizations">
-                    Student Organizations
-                </a>
 
-                <a href="#sslg">
-                    SSLG
-                </a>
+                <!-- STUDENT ORGANIZATIONS -->
 
-                <a href="#ap-club">
-                    AP Club
-                </a>
+                <div class="nested-dropdown">
+
+                    <a href="#student-organizations" class="nested-dropbtn">
+                        Student Organizations
+                        <span>›</span>
+                    </a>
+
+                    <div class="nested-dropdown-content">
+
+                        <a href="#sslg">
+                            SSLG
+                        </a>
+
+                        <a href="#ap-club">
+                            AP Club
+                        </a>
+
+                        <a href="#sci-math-club">
+                            Sci-Math Club
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SCHOOL ACTIVITIES -->
 
                 <a href="#school-activities">
                     School Activities
@@ -203,187 +211,137 @@
 
 
 
-<!-- =====================================================
-     SCHOOL PHOTO SLIDESHOW
-     ===================================================== -->
+<!-- =========================================
+     MAIN CONTENT
+     ========================================= -->
 
-<section class="school-slider">
-
-    <div class="slider-container">
+<main id="home">
 
 
-        <!-- SLIDE 1 -->
+    <!-- =========================================
+         IMAGE SLIDESHOW
+         ========================================= -->
 
-        <div class="slide active">
+    <section class="slideshow">
+
+        <div class="slides">
 
             <img
                 src="images/slide1.jpg"
                 alt="Mabolo National High School"
+                class="slide"
             >
-
-        </div>
-
-
-        <!-- SLIDE 2 -->
-
-        <div class="slide">
 
             <img
                 src="images/slide2.jpg"
                 alt="Mabolo National High School School Activity"
+                class="slide"
             >
-
-        </div>
-
-
-        <!-- SLIDE 3 -->
-
-        <div class="slide">
 
             <img
                 src="images/slide3.jpg"
                 alt="Mabolo National High School"
+                class="slide"
             >
-
-        </div>
-
-
-        <!-- SLIDE 4 -->
-
-        <div class="slide">
 
             <img
                 src="images/slide4.jpg"
                 alt="Mabolo National High School"
+                class="slide"
             >
 
         </div>
 
 
-        <!-- PREVIOUS -->
+        <!-- SLIDE ARROWS -->
 
-        <button
-            class="slider-arrow prev"
-            onclick="changeSlide(-1)"
-            aria-label="Previous slide"
-        >
-            ❮
+        <button class="slide-arrow prev" type="button">
+            ‹
+        </button>
+
+        <button class="slide-arrow next" type="button">
+            ›
         </button>
 
 
-        <!-- NEXT -->
+        <!-- SLIDE INDICATORS -->
 
-        <button
-            class="slider-arrow next"
-            onclick="changeSlide(1)"
-            aria-label="Next slide"
-        >
-            ❯
-        </button>
+        <div class="slide-indicators">
 
-
-        <!-- DOTS -->
-
-        <div class="slider-dots">
-
-            <span
-                class="dot active"
-                onclick="goToSlide(0)"
-            ></span>
-
-            <span
-                class="dot"
-                onclick="goToSlide(1)"
-            ></span>
-
-            <span
-                class="dot"
-                onclick="goToSlide(2)"
-            ></span>
-
-            <span
-                class="dot"
-                onclick="goToSlide(3)"
-            ></span>
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
 
-<!-- =====================================================
-     WELCOME HERO
-     ===================================================== -->
+    <!-- =========================================
+         WELCOME HERO
+         ========================================= -->
 
-<section class="hero" id="home">
+    <section class="hero">
 
-    <div class="hero-content">
+        <div class="hero-content">
 
-        <h1>
-            Welcome to Mabolo National High School
-        </h1>
+            <h2>
+                Welcome to Mabolo National High School
+            </h2>
 
-        <p>
-            Official website and information portal of
-            Mabolo National High School, Naga City,
-            Camarines Sur.
-        </p>
+            <p>
+                Official website and information portal of
+                Mabolo National High School, Naga City, Camarines Sur.
+            </p>
 
-        <div class="hero-buttons">
+            <div class="hero-buttons">
 
-            <a href="#latest-updates">
-                View Latest Updates
-            </a>
+                <a href="#announcements">
+                    View Latest Updates
+                </a>
 
-            <a href="#about">
-                Learn About Our School
-            </a>
+                <a href="#about">
+                    Learn About Our School
+                </a>
 
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     LATEST UPDATES
-     EVENTS / ANNOUNCEMENTS / NEWS
-     ===================================================== -->
-
-<section
-    class="content-section updates-section"
-    id="latest-updates"
->
-
-    <h2>
-        Latest Updates
-    </h2>
-
-    <p>
-        Stay updated with the latest events,
-        announcements, and news of
-        Mabolo National High School.
-    </p>
-
-
-    <div class="updates-grid">
-
-
-        <!-- EVENTS -->
-
-        <div class="update-column">
-
-            <div class="update-header">
-                EVENTS
             </div>
 
+        </div>
 
-            <div class="update-list">
+    </section>
+
+
+
+    <!-- =========================================
+         LATEST UPDATES
+         ========================================= -->
+
+    <section
+        class="content-section updates-section"
+        id="announcements"
+    >
+
+        <h2>Latest Updates</h2>
+
+        <p class="section-description">
+            Stay updated with the latest events,
+            announcements, and news of Mabolo National High School.
+        </p>
+
+
+        <div class="updates-grid">
+
+
+            <!-- EVENTS -->
+
+            <div class="update-column">
+
+                <div class="update-header">
+                    EVENTS
+                </div>
+
 
                 <article class="update-item">
 
@@ -396,8 +354,8 @@
                     </span>
 
                     <p>
-                        Details about upcoming school
-                        activities will be posted here.
+                        Details about upcoming school activities
+                        will be posted here.
                     </p>
 
                 </article>
@@ -440,20 +398,16 @@
 
             </div>
 
-        </div>
 
 
+            <!-- ANNOUNCEMENTS -->
 
-        <!-- ANNOUNCEMENTS -->
+            <div class="update-column">
 
-        <div class="update-column">
+                <div class="update-header">
+                    ANNOUNCEMENTS
+                </div>
 
-            <div class="update-header">
-                ANNOUNCEMENTS
-            </div>
-
-
-            <div class="update-list">
 
                 <article class="update-item">
 
@@ -510,20 +464,16 @@
 
             </div>
 
-        </div>
 
 
+            <!-- NEWS -->
 
-        <!-- NEWS -->
+            <div class="update-column">
 
-        <div class="update-column">
+                <div class="update-header">
+                    NEWS
+                </div>
 
-            <div class="update-header">
-                NEWS
-            </div>
-
-
-            <div class="update-list">
 
                 <article class="update-item">
 
@@ -582,231 +532,139 @@
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
 
-<!-- =====================================================
-     SCHOOL PROGRAMS
-     ===================================================== -->
+    <!-- =========================================
+         VISIT / CONTACT
+         ========================================= -->
 
-<section
-    class="content-section"
-    id="school-programs"
->
+    <section
+        class="content-section contact-section"
+        id="contact"
+    >
 
-    <h2>
-        School Programs
-    </h2>
+        <h2>Visit / Contact Us</h2>
 
-    <p>
-        Learn more about the programs, organizations,
-        and activities of Mabolo National High School.
-    </p>
+        <p class="section-description">
+            For school-related concerns, you may visit the school
+            or contact us through our official communication channels.
+        </p>
 
 
-    <div class="programs-grid">
+        <div class="contact-grid">
 
 
-        <div class="program-card">
+            <!-- VISIT -->
 
-            <h3>
-                Student Organizations
-            </h3>
+            <div class="contact-card">
 
-            <p>
-                Information about student organizations
-                and leadership activities.
-            </p>
+                <div class="contact-icon">
+                    📍
+                </div>
 
-        </div>
+                <h3>
+                    Visit
+                </h3>
 
+                <p>
+                    Brgy. Mabolo, Naga City,<br>
+                    Camarines Sur, Philippines
+                </p>
 
-        <div class="program-card">
-
-            <h3>
-                SSLG
-            </h3>
-
-            <p>
-                Programs and activities of the
-                Supreme Secondary Learner Government.
-            </p>
-
-        </div>
-
-
-        <div class="program-card">
-
-            <h3>
-                AP Club
-            </h3>
-
-            <p>
-                Activities and projects of the
-                Araling Panlipunan Club.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     VISIT / CONTACT US
-     ===================================================== -->
-
-<section
-    class="content-section contact-section"
-    id="contact"
->
-
-    <h2>
-        Visit / Contact Us
-    </h2>
-
-    <p>
-        For school-related concerns, you may visit
-        the school or contact us through our
-        official communication channels.
-    </p>
-
-
-    <div class="contact-grid">
-
-
-        <!-- VISIT -->
-
-        <div class="contact-card">
-
-            <div class="contact-icon">
-                📍
             </div>
 
-            <h3>
-                Visit
-            </h3>
-
-            <p>
-                Brgy. Mabolo, Naga City,<br>
-                Camarines Sur, Philippines
-            </p>
-
-        </div>
 
 
-        <!-- EMAIL -->
+            <!-- EMAIL -->
 
-        <div class="contact-card">
+            <div class="contact-card">
 
-            <div class="contact-icon">
-                ✉
+                <div class="contact-icon">
+                    ✉
+                </div>
+
+                <h3>
+                    Email
+                </h3>
+
+                <p>
+                    <a href="mailto:306352@deped.gov.ph">
+                        306352@deped.gov.ph
+                    </a>
+                </p>
+
             </div>
 
-            <h3>
-                Email
-            </h3>
-
-            <p>
-
-                <a href="mailto:306352@deped.gov.ph">
-                    306352@deped.gov.ph
-                </a>
-
-            </p>
-
-        </div>
 
 
-        <!-- FACEBOOK -->
+            <!-- FACEBOOK -->
 
-        <div class="contact-card">
+            <div class="contact-card">
 
-            <div class="contact-icon">
-                🔵
+                <div class="contact-icon">
+                    ●
+                </div>
+
+                <h3>
+                    Facebook
+                </h3>
+
+                <p>
+                    Mabolo National High School – Naga City
+                </p>
+
             </div>
 
-            <h3>
-                Facebook
-            </h3>
+        </div>
 
-            <p>
+    </section>
 
-                <a
-                    href="https://www.facebook.com/p/Mabolo-National-High-School-Naga-City-61554449007722/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Mabolo National High School –
-                    Naga City
-                </a>
 
-            </p>
+
+    <!-- =========================================
+         SEARCH
+         ========================================= -->
+
+    <section
+        class="content-section search-section"
+        id="search"
+    >
+
+        <h2>
+            Search the Website
+        </h2>
+
+        <p class="section-description">
+            Search for announcements, programs, reports,
+            school information, and other resources.
+        </p>
+
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                placeholder="Search the website..."
+                aria-label="Search the website"
+            >
+
+            <button type="button">
+                Search
+            </button>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
-
-
-
-<!-- =====================================================
-     SEARCH
-     ===================================================== -->
-
-<section
-    class="content-section search-section"
-    id="search"
->
-
-    <h2>
-        Search the Website
-    </h2>
-
-    <p>
-        Search for announcements, programs,
-        reports, school information, and
-        other resources.
-    </p>
-
-
-    <div class="search-box">
-
-        <input
-            type="text"
-            id="websiteSearch"
-            placeholder="Search the website..."
-            aria-label="Search the website"
-        >
-
-        <button
-            type="button"
-            onclick="searchWebsite()"
-        >
-            Search
-        </button>
-
-    </div>
-
-
-    <p
-        id="searchMessage"
-        class="search-message"
-    ></p>
-
-</section>
+</main>
 
 
 
-<!-- =====================================================
+<!-- =========================================
      FOOTER
-     ===================================================== -->
+     ========================================= -->
 
 <footer>
 
@@ -819,137 +677,5 @@
 
 
 
-<!-- =====================================================
-     JAVASCRIPT
-     ===================================================== -->
-
-<script>
-
-
-/* =====================================================
-   SLIDESHOW
-   ===================================================== */
-
-let currentSlide = 0;
-
-const slides =
-    document.querySelectorAll(".slide");
-
-const dots =
-    document.querySelectorAll(".dot");
-
-
-function showSlide(index) {
-
-    if (index >= slides.length) {
-
-        currentSlide = 0;
-
-    }
-
-    else if (index < 0) {
-
-        currentSlide = slides.length - 1;
-
-    }
-
-    else {
-
-        currentSlide = index;
-
-    }
-
-
-    slides.forEach(function(slide) {
-
-        slide.classList.remove("active");
-
-    });
-
-
-    dots.forEach(function(dot) {
-
-        dot.classList.remove("active");
-
-    });
-
-
-    if (slides.length > 0) {
-
-        slides[currentSlide]
-            .classList.add("active");
-
-    }
-
-
-    if (dots.length > 0) {
-
-        dots[currentSlide]
-            .classList.add("active");
-
-    }
-
-}
-
-
-function changeSlide(direction) {
-
-    showSlide(currentSlide + direction);
-
-}
-
-
-function goToSlide(index) {
-
-    showSlide(index);
-
-}
-
-
-/* AUTOMATIC SLIDESHOW */
-
-setInterval(function() {
-
-    changeSlide(1);
-
-}, 5000);
-
-
-
-/* =====================================================
-   SIMPLE WEBSITE SEARCH
-   ===================================================== */
-
-function searchWebsite() {
-
-    const searchInput =
-        document.getElementById("websiteSearch");
-
-    const searchMessage =
-        document.getElementById("searchMessage");
-
-    const searchTerm =
-        searchInput.value.trim();
-
-
-    if (searchTerm === "") {
-
-        searchMessage.textContent =
-            "Please enter something to search.";
-
-        return;
-
-    }
-
-
-    searchMessage.textContent =
-        'Search feature will be connected to the website content soon.';
-
-}
-
-</script>
-
-
 </body>
-
 </html>
