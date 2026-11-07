@@ -33,8 +33,14 @@ html {
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
     background-color: var(--light-blue);
+
     color: var(--text-color);
 }
 
@@ -44,9 +50,13 @@ body {
    ========================================================= */
 
 .site-header {
+
     width: 100%;
+
     background-color: var(--white);
+
     padding: 18px 40px 12px;
+
     border-bottom: 1px solid #e5e5e5;
 }
 
@@ -57,40 +67,59 @@ body {
    ========================================================= */
 
 .header-top {
+
     max-width: 1250px;
+
     margin: 0 auto;
+
     display: flex;
+
     align-items: center;
+
     gap: 18px;
 }
 
 
-/* School logo */
+/* SCHOOL LOGO */
 
 .school-logo {
+
     width: 90px;
+
     height: 90px;
+
     object-fit: contain;
+
     flex-shrink: 0;
 }
 
 
-/* School name */
+/* SCHOOL NAME */
 
 .school-name {
+
     text-align: left;
 }
 
+
 .school-name h1 {
+
     margin: 0 0 5px;
+
     color: var(--dark-brown);
+
     font-size: 25px;
+
     font-weight: bold;
 }
 
+
 .school-name p {
+
     margin: 0;
+
     color: #555;
+
     font-size: 14px;
 }
 
@@ -100,21 +129,26 @@ body {
    ========================================================= */
 
 .main-nav {
+
     max-width: 1250px;
+
     margin: 12px auto 0;
 
     display: flex;
+
     align-items: center;
+
     gap: 4px;
 
     flex-wrap: wrap;
 }
 
 
-/* Normal navigation links */
+/* NAVIGATION LINKS */
 
 .main-nav > a,
 .dropbtn {
+
     display: block;
 
     padding: 11px 14px;
@@ -124,16 +158,18 @@ body {
     text-decoration: none;
 
     font-size: 15px;
+
     font-weight: bold;
 
     transition: 0.2s ease;
 }
 
 
-/* Hover */
+/* NAVIGATION HOVER */
 
 .main-nav > a:hover,
 .dropbtn:hover {
+
     color: var(--royal-blue);
 }
 
@@ -143,27 +179,33 @@ body {
    ========================================================= */
 
 .dropdown {
+
     position: relative;
+
     display: inline-block;
 }
 
 
-/* Arrow */
+/* ARROW */
 
 .dropbtn span {
+
     font-size: 11px;
+
     margin-left: 3px;
 }
 
 
-/* Dropdown container */
+/* DROPDOWN BOX */
 
 .dropdown-content {
+
     display: none;
 
     position: absolute;
 
     top: 100%;
+
     left: 0;
 
     min-width: 245px;
@@ -172,7 +214,9 @@ body {
 
     border-radius: 4px;
 
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    box-shadow:
+        0 6px 18px
+        rgba(0, 0, 0, 0.15);
 
     z-index: 1000;
 
@@ -182,9 +226,10 @@ body {
 }
 
 
-/* Dropdown links */
+/* DROPDOWN LINKS */
 
 .dropdown-content a {
+
     display: block;
 
     padding: 12px 15px;
@@ -201,33 +246,37 @@ body {
 }
 
 
-/* Last item */
-
 .dropdown-content a:last-child {
+
     border-bottom: none;
 }
 
 
-/* Dropdown hover */
+/* DROPDOWN HOVER */
 
 .dropdown-content a:hover {
+
     background-color: #f1f3f7;
+
     color: var(--royal-blue);
 }
 
 
-/* Show dropdown */
+/* SHOW DROPDOWN */
 
 .dropdown:hover .dropdown-content {
+
     display: block;
 }
 
 
+
 /* =========================================================
-   IMAGE SLIDER
+   SCHOOL PHOTO SLIDESHOW
    ========================================================= */
 
 .school-slider {
+
     max-width: 1250px;
 
     margin: 20px auto 30px;
@@ -242,11 +291,41 @@ body {
 }
 
 
-/* Slider images */
+.slider-container {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 420px;
+}
+
+
+/* SLIDES */
+
+.slide {
+
+    display: none;
+
+    width: 100%;
+
+    height: 100%;
+}
+
+
+.slide.active {
+
+    display: block;
+}
+
+
+/* SLIDE IMAGES */
 
 .school-slider img {
+
     width: 100%;
-    height: 420px;
+
+    height: 100%;
 
     object-fit: cover;
 
@@ -254,9 +333,10 @@ body {
 }
 
 
-/* Slider arrows */
+/* SLIDER ARROWS */
 
 .slider-arrow {
+
     position: absolute;
 
     top: 50%;
@@ -264,13 +344,15 @@ body {
     transform: translateY(-50%);
 
     width: 42px;
+
     height: 42px;
 
     border: none;
 
     border-radius: 50%;
 
-    background: rgba(0, 0, 0, 0.35);
+    background:
+        rgba(0, 0, 0, 0.35);
 
     color: white;
 
@@ -283,28 +365,34 @@ body {
 
 
 .slider-arrow:hover {
-    background: rgba(0, 0, 0, 0.6);
+
+    background:
+        rgba(0, 0, 0, 0.65);
 }
 
 
-.slider-prev {
+.slider-arrow.prev {
+
     left: 15px;
 }
 
 
-.slider-next {
+.slider-arrow.next {
+
     right: 15px;
 }
 
 
-/* Slider dots */
+/* SLIDER DOTS */
 
 .slider-dots {
+
     position: absolute;
 
     bottom: 12px;
 
     left: 0;
+
     right: 0;
 
     text-align: center;
@@ -313,44 +401,51 @@ body {
 }
 
 
-.slider-dot {
+.dot {
+
     display: inline-block;
 
     width: 9px;
+
     height: 9px;
 
     margin: 0 4px;
 
     border-radius: 50%;
 
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color:
+        rgba(255, 255, 255, 0.7);
 
     cursor: pointer;
 }
 
 
-.slider-dot.active {
+.dot.active {
+
     background-color: white;
 }
 
 
+
 /* =========================================================
-   HERO SECTION
+   HERO
    ========================================================= */
 
 .hero {
+
     max-width: 1250px;
 
     margin: 0 auto 30px;
 
     padding: 60px 40px;
 
-    background: linear-gradient(
-        110deg,
-        var(--choco-brown),
-        #443b50,
-        var(--royal-blue)
-    );
+    background:
+        linear-gradient(
+            110deg,
+            var(--choco-brown),
+            #443b50,
+            var(--royal-blue)
+        );
 
     border-radius: 8px;
 
@@ -360,7 +455,8 @@ body {
 }
 
 
-.hero-content h2 {
+.hero-content h1 {
+
     margin: 0 0 15px;
 
     color: white;
@@ -370,6 +466,7 @@ body {
 
 
 .hero-content p {
+
     max-width: 850px;
 
     margin: 0 auto 25px;
@@ -382,9 +479,10 @@ body {
 }
 
 
-/* Hero buttons */
+/* HERO BUTTONS */
 
 .hero-buttons {
+
     display: flex;
 
     justify-content: center;
@@ -396,6 +494,7 @@ body {
 
 
 .hero-buttons a {
+
     display: inline-block;
 
     padding: 11px 20px;
@@ -417,10 +516,12 @@ body {
 
 
 .hero-buttons a:hover {
+
     background-color: #eeeeee;
 
     color: var(--royal-blue);
 }
+
 
 
 /* =========================================================
@@ -428,6 +529,7 @@ body {
    ========================================================= */
 
 .content-section {
+
     max-width: 1250px;
 
     margin: 0 auto 30px;
@@ -443,6 +545,7 @@ body {
 
 
 .content-section h2 {
+
     margin: 0 0 12px;
 
     color: var(--choco-brown);
@@ -452,6 +555,7 @@ body {
 
 
 .content-section > p {
+
     margin: 0 auto;
 
     max-width: 850px;
@@ -464,19 +568,22 @@ body {
 }
 
 
+
 /* =========================================================
    LATEST UPDATES
    EVENTS / ANNOUNCEMENTS / NEWS
    ========================================================= */
 
 .updates-grid {
+
     max-width: 1050px;
 
     margin: 30px auto 0;
 
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:
+        repeat(3, 1fr);
 
     gap: 14px;
 
@@ -484,9 +591,10 @@ body {
 }
 
 
-/* Individual update column */
+/* UPDATE COLUMN */
 
 .update-column {
+
     border: 1px solid var(--border-color);
 
     background-color: white;
@@ -495,10 +603,9 @@ body {
 }
 
 
-/* Column heading */
+/* COLUMN HEADER */
 
-.update-column h3 {
-    margin: 0;
+.update-header {
 
     padding: 10px;
 
@@ -510,25 +617,33 @@ body {
 
     font-size: 16px;
 
+    font-weight: bold;
+
     text-transform: uppercase;
 }
 
 
-/* Update items */
+/* UPDATE ITEMS */
 
 .update-item {
+
     padding: 15px;
 
-    border-bottom: 1px solid #dddddd;
+    border-bottom:
+        1px solid #dddddd;
 }
 
 
 .update-item:last-child {
+
     border-bottom: none;
 }
 
 
-.update-item h4 {
+/* UPDATE TITLE */
+
+.update-item h3 {
+
     margin: 0 0 5px;
 
     color: var(--dark-brown);
@@ -537,7 +652,12 @@ body {
 }
 
 
+/* DATE */
+
 .update-date {
+
+    display: block;
+
     margin: 0 0 7px;
 
     color: var(--royal-blue);
@@ -546,7 +666,10 @@ body {
 }
 
 
+/* DESCRIPTION */
+
 .update-item p {
+
     margin: 0;
 
     color: #555;
@@ -557,37 +680,46 @@ body {
 }
 
 
+
 /* =========================================================
    SCHOOL PROGRAMS
    ========================================================= */
 
 .programs-grid {
+
     max-width: 1050px;
 
     margin: 30px auto 0;
 
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:
+        repeat(3, 1fr);
 
     gap: 20px;
 }
 
 
 .program-card {
+
     padding: 25px 20px;
 
-    background-color: var(--light-blue);
+    background-color:
+        var(--light-blue);
 
-    border-top: 4px solid var(--royal-blue);
+    border-top:
+        4px solid var(--royal-blue);
 
     border-radius: 5px;
 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+    box-shadow:
+        0 4px 10px
+        rgba(0, 0, 0, 0.07);
 }
 
 
 .program-card h3 {
+
     margin: 0 0 10px;
 
     color: var(--dark-brown);
@@ -597,6 +729,7 @@ body {
 
 
 .program-card p {
+
     margin: 0;
 
     color: #555;
@@ -607,29 +740,35 @@ body {
 }
 
 
+
 /* =========================================================
    VISIT / CONTACT
    ========================================================= */
 
 .contact-grid {
+
     max-width: 1050px;
 
     margin: 30px auto 0;
 
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:
+        repeat(3, 1fr);
 
     gap: 20px;
 }
 
 
 .contact-card {
+
     padding: 25px 20px;
 
-    background-color: var(--light-blue);
+    background-color:
+        var(--light-blue);
 
-    border-top: 4px solid var(--royal-blue);
+    border-top:
+        4px solid var(--royal-blue);
 
     border-radius: 5px;
 
@@ -638,6 +777,7 @@ body {
 
 
 .contact-icon {
+
     font-size: 25px;
 
     margin-bottom: 10px;
@@ -645,6 +785,7 @@ body {
 
 
 .contact-card h3 {
+
     margin: 0 0 10px;
 
     color: var(--dark-brown);
@@ -654,6 +795,7 @@ body {
 
 
 .contact-card p {
+
     margin: 0;
 
     color: #555;
@@ -665,6 +807,7 @@ body {
 
 
 .contact-card a {
+
     color: var(--royal-blue);
 
     font-weight: bold;
@@ -674,20 +817,24 @@ body {
 
 
 .contact-card a:hover {
+
     text-decoration: underline;
 }
 
 
+
 /* =========================================================
-   SEARCH SECTION
+   SEARCH
    ========================================================= */
 
 .search-section {
+
     margin-bottom: 0;
 }
 
 
 .search-box {
+
     display: flex;
 
     max-width: 650px;
@@ -697,6 +844,7 @@ body {
 
 
 .search-box input {
+
     flex: 1;
 
     padding: 13px 15px;
@@ -705,7 +853,8 @@ body {
 
     border-right: none;
 
-    border-radius: 5px 0 0 5px;
+    border-radius:
+        5px 0 0 5px;
 
     font-size: 15px;
 
@@ -714,18 +863,23 @@ body {
 
 
 .search-box input:focus {
-    border-color: var(--royal-blue);
+
+    border-color:
+        var(--royal-blue);
 }
 
 
 .search-box button {
+
     padding: 13px 22px;
 
     border: none;
 
-    border-radius: 0 5px 5px 0;
+    border-radius:
+        0 5px 5px 0;
 
-    background-color: var(--royal-blue);
+    background-color:
+        var(--royal-blue);
 
     color: white;
 
@@ -738,8 +892,19 @@ body {
 
 
 .search-box button:hover {
-    background-color: var(--choco-brown);
+
+    background-color:
+        var(--choco-brown);
 }
+
+
+.search-message {
+
+    margin-top: 15px !important;
+
+    color: var(--royal-blue) !important;
+}
+
 
 
 /* =========================================================
@@ -747,11 +912,13 @@ body {
    ========================================================= */
 
 footer {
+
     margin-top: 30px;
 
     padding: 22px;
 
-    background-color: var(--royal-blue);
+    background-color:
+        var(--royal-blue);
 
     color: white;
 
@@ -760,6 +927,7 @@ footer {
 
 
 footer p {
+
     margin: 0;
 
     color: white;
@@ -768,19 +936,23 @@ footer p {
 }
 
 
+
 /* =========================================================
-   MOBILE RESPONSIVE
+   TABLET
    ========================================================= */
 
 @media (max-width: 900px) {
 
     .site-header {
+
         padding-left: 20px;
+
         padding-right: 20px;
     }
 
 
     .header-top {
+
         justify-content: center;
 
         text-align: center;
@@ -788,66 +960,82 @@ footer p {
 
 
     .school-name {
+
         text-align: center;
     }
 
 
     .main-nav {
+
         justify-content: center;
     }
 
 
     .school-slider {
+
         margin-left: 15px;
+
         margin-right: 15px;
     }
 
 
-    .school-slider img {
+    .slider-container {
+
         height: 330px;
     }
 
 
     .hero {
+
         margin-left: 15px;
+
         margin-right: 15px;
     }
 
 
     .content-section {
+
         margin-left: 15px;
+
         margin-right: 15px;
     }
 
 
     .updates-grid {
+
         grid-template-columns: 1fr;
     }
 
 
     .programs-grid {
+
         grid-template-columns: 1fr;
     }
 
 
     .contact-grid {
+
         grid-template-columns: 1fr;
     }
+
 }
 
 
+
 /* =========================================================
-   SMALL MOBILE DEVICES
+   MOBILE
    ========================================================= */
 
 @media (max-width: 600px) {
 
     .site-header {
+
         padding-top: 15px;
     }
 
 
     .header-top {
+
         flex-direction: column;
 
         gap: 8px;
@@ -855,22 +1043,27 @@ footer p {
 
 
     .school-logo {
+
         width: 80px;
+
         height: 80px;
     }
 
 
     .school-name h1 {
+
         font-size: 21px;
     }
 
 
     .school-name p {
+
         font-size: 13px;
     }
 
 
     .main-nav {
+
         flex-direction: column;
 
         width: 100%;
@@ -881,6 +1074,7 @@ footer p {
 
     .main-nav > a,
     .dropbtn {
+
         width: 100%;
 
         text-align: center;
@@ -890,37 +1084,42 @@ footer p {
 
 
     .dropdown {
+
         width: 100%;
     }
 
 
     .dropdown-content {
+
         position: static;
 
         width: 100%;
 
         min-width: 0;
 
-        transform: none;
-
         box-shadow: none;
 
-        border: 1px solid #eeeeee;
+        border:
+            1px solid #eeeeee;
     }
 
 
     .school-slider {
+
         margin-top: 15px;
     }
 
 
-    .school-slider img {
+    .slider-container {
+
         height: 230px;
     }
 
 
     .slider-arrow {
+
         width: 35px;
+
         height: 35px;
 
         font-size: 20px;
@@ -928,37 +1127,45 @@ footer p {
 
 
     .hero {
+
         padding: 45px 20px;
     }
 
 
-    .hero-content h2 {
+    .hero-content h1 {
+
         font-size: 28px;
     }
 
 
     .hero-content p {
+
         font-size: 15px;
     }
 
 
     .content-section {
+
         padding: 40px 20px;
     }
 
 
     .content-section h2 {
+
         font-size: 25px;
     }
 
 
     .search-box {
+
         flex-direction: column;
     }
 
 
     .search-box input {
-        border-right: 1px solid #ccc;
+
+        border-right:
+            1px solid #ccc;
 
         border-radius: 5px;
 
@@ -967,6 +1174,8 @@ footer p {
 
 
     .search-box button {
+
         border-radius: 5px;
     }
+
 }
