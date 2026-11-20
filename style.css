@@ -795,10 +795,12 @@ body {
         9px 16px;
 
     background:
-        white;
+        /* white; */
+        var(--royal-blue);
 
     color:
-        var(--dark-brown);
+        /* var(--dark-brown); */
+        white;
 
     text-decoration:
         none;
@@ -818,10 +820,12 @@ body {
 .hero-buttons a:hover {
 
     background:
-        #eeeeee;
+        /* #eeeeee; */
+        #304f8ccc;
 
     color:
-        var(--royal-blue);
+        /* var(--royal-blue); */
+        white;
 
 }
 
@@ -1003,7 +1007,7 @@ body {
         8px;
 
     background:
-        #707980;
+        var(--royal-blue);
 
     color:
         white;
@@ -1045,7 +1049,7 @@ body {
         0 0 3px;
 
     color:
-        #222;
+        var(--choco-brown);
 
     font-size:
         11px;
@@ -1153,7 +1157,7 @@ body {
 .contact-item {
 
     min-height:
-        75px;
+        30px;
 
     padding:
         8px 25px;
